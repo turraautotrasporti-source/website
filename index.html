@@ -123,13 +123,11 @@
 <section id="contatti" class="section dark reveal">
     <h2>Contatti</h2>
 
-    <form class="contact-form">
-        <input type="text" placeholder="Nome" required>
-        <input type="email" placeholder="Email" required>
-        <input type="text" placeholder="Telefono">
-        <textarea placeholder="Messaggio" rows="5"></textarea>
-        <button type="submit">Invia Messaggio</button>
-    </form>
+   <form class="contact-form"
+       <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="Nuovo messaggio dal sito web Autotrasporti">
+action="https://formsubmit.co/turra.autotrasporti@gmail.com"
+method="POST">
 
     <div class="contact-info">
         <p>📞 +39 348 638 4480</p>
