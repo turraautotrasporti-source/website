@@ -150,25 +150,5 @@ Offriamo servizi di trasporto merci su scala nazionale, garantendo soluzioni pun
 <a class="whatsapp-float" href="https://wa.me/393486384480" target="_blank">💬</a>
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll('#sedi .card');
-    const mapFrame = document.getElementById('map-frame');
-
-    cards.forEach(card => {
-        card.addEventListener('click', () => {
-            // 1. Rimuove la classe active da tutte le card
-            cards.forEach(c => c.classList.remove('active'));
-            
-            // 2. Aggiunge la classe active alla card cliccata
-            card.classList.add('active');
-            
-            // 3. Prende il link dal data-src della card cliccata
-            const newMapUrl = card.getAttribute('data-src');
-            
-            // 4. Aggiorna l'iframe della mappa
-            mapFrame.src = newMapUrl;
-        });
-    });
-});
 </body>
 </html>
