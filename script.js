@@ -1,10 +1,10 @@
-function openImg(img){
-const modal = document.createElement("div");
-modal.classList.add("modal");
+const elements = document.querySelectorAll('.reveal');
 
-modal.innerHTML = `<img src="${img.src}">`;
-
-modal.onclick = () => modal.remove();
-
-document.body.appendChild(modal);
-}
+window.addEventListener('scroll', () => {
+    elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            el.classList.add('active');
+        }
+    });
+});
