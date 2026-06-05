@@ -1,51 +1,43 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Inter', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Turrà Francesco</title>
 
-body{
-    background:#F6F8FB;
-    color:#0F172A;
-    line-height:1.6;
-}
+    <link rel="stylesheet" href="style.css"/>
+    <script defer src="script.js"></script>
 
-/* HEADER */
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 60px;
-    background:#FFFFFF;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    border-bottom:1px solid #E5E7EB;
-}
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
 
-header img{
-    height:48px;
-}
+<body>
 
-nav a{
-    color:#475569;
-    margin:0 14px;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:500;
-    transition:0.2s;
-}
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="Logo Aziendale">
+    </div>
 
-nav a:hover{
-    color:#c4133b;
-}
+    <nav>
+        <a href="#servizi">Servizi</a>
+        <a href="#chi-siamo">Chi Siamo</a>
+        <a href="#sedi">Sedi</a>
+        <a href="#contatti">Contatti</a>
+    </nav>
 
+    <a class="whatsapp-top" href="https://wa.me/393486384480" target="_blank">
+        WhatsApp
+    </a>
+</header>
+
+<!-- HERO -->
 <section class="hero">
 
     <div class="hero-overlay">
 
-        <h1>Turrà Francesco Autotrasporti</h1>
+        <h1>Turrà Francesco </h1>
 
         <p>Trasporti e Logistica su Strada in tutta Italia</p>
 
@@ -58,172 +50,104 @@ nav a:hover{
 
 </section>
 
-/* BOTTONI */
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 28px;
-    background:#c4133b;
-    color:white;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.25s;
-}
+<!-- CHI SIAMO -->
+<section id="chi-siamo" class="section reveal">
+    <h2>Chi Siamo</h2>
+    <p>
+        Turrà Francesco Autotrasporti opera nel settore della logistica e del trasporto merci su strada.
+        Offriamo servizi affidabili, puntuali e personalizzati per aziende e privati con una copertura nazionale.
+    </p>
+</section>
 
-.btn:hover{
-    background:#a80f30;
-    transform:translateY(-2px);
-}
+<!-- SERVIZI -->
+<section id="servizi" class="section dark reveal">
+    <h2>I Nostri Servizi</h2>
 
-.btn.secondary{
-    background:transparent;
-    border:1px solid #c4133b;
-    color:#c4133b;
-}
+    <div class="grid">
+        <div class="card">🚚 Trasporto Merci Nazionale</div>
+        <div class="card">📦 Logistica e Distribuzione</div>
+        <div class="card">⏱ Trasporti Dedicati</div>
+        <div class="card">🏭 Servizi per Aziende</div>
+        <div class="card">📍 Spedizioni Programmate</div>
+        <div class="card">⚙️ Soluzioni Personalizzate</div>
+    </div>
+</section>
 
-.btn.secondary:hover{
-    background:#c4133b;
-    color:white;
-}
+<!-- GALLERY -->
+<section class="section reveal">
+    <h2>La Nostra Flotta</h2>
 
-/* IMMAGINE HERO */
-.hero-image{
-    margin-top:35px;
-}
+    <div class="gallery">
+        <img src="images/1.jpg">
+        <img src="images/2.jpg">
+        <img src="images/3.jpg">
+        <img src="images/4.jpg">
+    </div>
+</section>
 
-.hero-image img{
-    width:85%;
-    max-width:720px;
-    border-radius:12px;
-    border:1px solid #E5E7EB;
-    box-shadow:0 15px 40px rgba(0,0,0,0.08);
-}
+<!-- SEDI -->
+<section id="sedi" class="section dark reveal">
+    <h2>Sedi Operative</h2>
 
-/* SEZIONI */
-.section{
-    padding:100px 20px;
-    text-align:center;
-    background:#F6F8FB;
-}
+    <div class="grid">
+        <div class="card">
+            <h3>Sede Legale</h3>
+            Via F. De Pinedo, 2<br>
+            88842 Cutro (KR)
+        </div>
 
-.section h2{
-    font-size:2.2rem;
-    font-weight:700;
-    color:#0F172A;
-}
+        <div class="card">
+            <h3>Sede Operativa</h3>
+            Via Ignazio Silone, 26<br>
+            42122 Reggio Emilia (RE)
+        </div>
 
-.section p{
-    color:#475569;
-    max-width:800px;
-    margin:auto;
-}
+        <div class="card">
+            <h3>Sede Operativa</h3>
+            Via XXV Aprile<br>
+            Gualtieri (RE)
+        </div>
+    </div>
+</section>
 
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:22px;
-    margin-top:50px;
-}
+<!-- MAPPA -->
+<section class="section reveal">
+    <h2>Dove Siamo</h2>
 
-/* CARD LIGHT STYLE */
-.card{
-    background:#FFFFFF;
-    border:1px solid #E5E7EB;
-    padding:28px;
-    border-radius:12px;
-    text-align:left;
-    transition:0.25s;
-    box-shadow:0 6px 18px rgba(0,0,0,0.04);
-}
+    <iframe
+        src="https://www.google.com/maps?q=Via%20Ignazio%20Silone%2026%20Reggio%20Emilia&output=embed"
+        loading="lazy">
+    </iframe>
+</section>
 
-.card:hover{
-    transform:translateY(-6px);
-    border-color:#c4133b;
-}
+<!-- CONTATTI -->
+<section id="contatti" class="section dark reveal">
+    <h2>Contatti</h2>
 
-/* GALLERY */
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:18px;
-    margin-top:45px;
-}
+    <form class="contact-form">
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Telefono">
+        <textarea placeholder="Messaggio" rows="5"></textarea>
+        <button type="submit">Invia Messaggio</button>
+    </form>
 
-.gallery img{
-    width:100%;
-    border-radius:12px;
-    transition:0.3s;
-    border:1px solid #E5E7EB;
-}
+    <div class="contact-info">
+        <p>📞 +39 348 638 4480</p>
+        <p>✉️ turra.autotrasporti@gmail.com</p>
+        <p>📧 PEC: turra-francesco@pec.it</p>
+    </div>
+</section>
 
-.gallery img:hover{
-    transform:scale(1.02);
-}
+<!-- FOOTER -->
+<footer>
+    <p><strong>Turrà Francesco Autotrasporti</strong></p>
+    <p>P.IVA 01466180799 | C.F. TRRFNC64L02D236Q</p>
+    <p>© 2026 Tutti i diritti riservati</p>
+</footer>
 
-/* MAP */
-iframe{
-    width:92%;
-    height:420px;
-    border:none;
-    border-radius:12px;
-    border:1px solid #E5E7EB;
-}
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp-float" href="https://wa.me/393486384480" target="_blank">💬</a>
 
-/* FORM */
-.contact-form{
-    display:flex;
-    flex-direction:column;
-    max-width:540px;
-    margin:auto;
-    margin-top:30px;
-}
-
-.contact-form input,
-.contact-form textarea{
-    margin:10px 0;
-    padding:14px;
-    border-radius:8px;
-    border:1px solid #E5E7EB;
-    background:#FFFFFF;
-    color:#0F172A;
-}
-
-.contact-form button{
-    background:#c4133b;
-    border:none;
-    padding:14px;
-    border-radius:8px;
-    font-weight:600;
-    color:white;
-    cursor:pointer;
-}
-
-.contact-form button:hover{
-    background:#a80f30;
-}
-
-/* WHATSAPP */
-.whatsapp-float{
-    position:fixed;
-    bottom:22px;
-    right:22px;
-    background:#c4133b;
-    color:white;
-    padding:14px;
-    border-radius:50%;
-    font-size:18px;
-    text-decoration:none;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-
-/* FOOTER */
-footer{
-    padding:40px;
-    text-align:center;
-    color:#64748B;
-    font-size:13px;
-    border-top:1px solid #E5E7EB;
-    background:#FFFFFF;
-}
+</body>
+</html>
