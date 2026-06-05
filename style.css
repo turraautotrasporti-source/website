@@ -26,6 +26,50 @@ header{
     border-bottom:1px solid #E5E7EB;
 }
 
+/* Rendiamo l'header fisso in alto */
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: transparent; /* O il tuo colore iniziale */
+    transition: all 0.3s ease;
+}
+
+/* Allineamento Logo + Titolo nell'header */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Spazio tra logo e testo */
+}
+
+/* Stile iniziale del titolo nell'header (Invisibile) */
+.header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000; /* Colore Nero richiesto */
+    opacity: 0;
+    transform: translateX(-10px); /* Leggero effetto movimento */
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Quando l'utente scorre, questa classe attiva la visibilità */
+#main-header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95); /* L'header diventa bianco o semitrasparente */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);      /* Un'ombra leggera ci sta bene */
+}
+
+#main-header.scrolled .header-title {
+    opacity: 1;
+    transform: translateX(0); /* Torna in posizione */
+}
+
 header img{
     height:48px;
 }
