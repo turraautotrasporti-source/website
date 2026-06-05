@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Turrà Francesco</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turrà Francesco Autotrasporti</title>
 
-    <link rel="stylesheet" href="style.css"/>
-    <script defer src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="logo">
         <img src="images/logo.png" alt="Logo Aziendale">
@@ -24,8 +22,8 @@
         <a href="#servizi">Servizi</a>
         <a href="#chi-siamo">Chi Siamo</a>
         <a href="#sedi">Sedi</a>
-        <a href="#contatti">Contatti</a>
         <a href="#gallery">Galleria</a>
+        <a href="#contatti">Contatti</a>
     </nav>
 </header>
 
@@ -35,7 +33,6 @@
     <div class="hero-overlay">
 
         <h1>Turrà Francesco Autotrasporti</h1>
-
         <p>Trasporti e Logistica su Strada in tutta Italia</p>
 
         <div class="hero-buttons">
@@ -48,103 +45,99 @@
 </section>
 
 <!-- CHI SIAMO -->
-<section id="chi-siamo" class="section reveal">
-    <h2>Chi Siamo</h2>
-    <p>
-        Turrà Francesco Autotrasporti opera nel settore della logistica e del trasporto merci su strada.
-        Offriamo servizi affidabili, puntuali e personalizzati per aziende e privati con una copertura nazionale.
-    </p>
+<section id="chi-siamo" class="section">
+<h2>Chi Siamo</h2>
+<p>Azienda di trasporti su strada operativa in tutta Italia.</p>
 </section>
 
 <!-- SERVIZI -->
-<section id="servizi" class="section dark reveal">
-    <h2>I Nostri Servizi</h2>
+<section id="servizi" class="section">
+<h2>Servizi</h2>
 
-    <div class="grid">
-        <div class="card">🚚 Trasporto Merci Nazionale</div>
-        <div class="card">📦 Logistica e Distribuzione</div>
-        <div class="card">⏱ Trasporti Dedicati</div>
-        <div class="card">🏭 Noleggio</div>
-        <div class="card">📍 Spedizioni Programmate</div>
-        <div class="card">⚙️ Trasporto rifiuiti non pericolosi come da normative</div>
-    </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery" class="section reveal">
-    <h2>La Nostra Flotta</h2>
-
-    <div class="gallery">
-        <img src="images/1.jpg">
-        <img src="images/2.jpg">
-        <img src="images/3.jpg">
-        <img src="images/4.jpg">
-    </div>
+<div class="grid">
+<div class="card">Trasporto Nazionale</div>
+<div class="card">Logistica</div>
+<div class="card">Distribuzione</div>
+<div class="card">Trasporti Dedicati</div>
+</div>
 </section>
 
 <!-- SEDI -->
-<section id="sedi" class="section dark reveal">
-    <h2>Sedi Operative</h2>
+<section id="sedi" class="section dark">
 
-    <div class="grid">
-        <div class="card">
-            <h3>Sede Legale</h3>
-            Via F. De Pinedo, 2<br>
-            88842 Cutro (KR)
-        </div>
+<h2>Sedi Operative</h2>
 
-        <div class="card">
-            <h3>Sede Operativa</h3>
-            Via Ignazio Silone, 26<br>
-            42122 Reggio Emilia (RE)
-        </div>
+<div class="grid">
 
-        <div class="card">
-            <h3>Sede Operativa</h3>
-            Via XXV Aprile<br>
-            Gualtieri (RE)
-        </div>
-    </div>
+<div class="card">
+<h3>Sede Legale</h3>
+Via F. De Pinedo, 2<br>
+Cutro (KR)
+</div>
+
+<div class="card">
+<h3>Sede Operativa</h3>
+Via Ignazio Silone, 26<br>
+Reggio Emilia (RE)
+</div>
+
+<div class="card">
+<h3>Sede Operativa</h3>
+Via XXV Aprile<br>
+Gualtieri (RE)
+</div>
+
+</div>
+
 </section>
 
 <!-- MAPPA -->
-<section class="section reveal">
-    <h2>Dove Siamo</h2>
+<section class="section">
 
-    <iframe
-        src="https://www.google.com/maps?q=Via%20Ignazio%20Silone%2026%20Reggio%20Emilia&output=embed"
-        loading="lazy">
-    </iframe>
+<h2>Dove Siamo</h2>
+
+<iframe
+src="https://www.google.com/maps?q=Reggio%20Emilia&output=embed"
+loading="lazy">
+</iframe>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+
+<h2>Galleria</h2>
+
+<div class="gallery-wrapper">
+
+<img src="images/camion1.jpg" onclick="openImg(this)">
+<img src="images/camion2.jpg" onclick="openImg(this)">
+<img src="images/camion3.jpg" onclick="openImg(this)">
+<img src="images/camion4.jpg" onclick="openImg(this)">
+
+</div>
+
 </section>
 
 <!-- CONTATTI -->
-<section id="contatti" class="section dark reveal">
-    <h2>Contatti</h2>
+<section id="contatti" class="section">
 
-    <form class="contact-form">
-        <input type="text" placeholder="Nome" required>
-        <input type="email" placeholder="Email" required>
-        <input type="text" placeholder="Telefono">
-        <textarea placeholder="Messaggio" rows="5"></textarea>
-        <button type="submit">Invia Messaggio</button>
-    </form>
+<h2>Contatti</h2>
 
-    <div class="contact-info">
-        <p>📞 +39 348 638 4480</p>
-        <p>✉️ turra.autotrasporti@gmail.com</p>
-        <p>📧 PEC: turra-francesco@pec.it</p>
-    </div>
+<form class="contact-form">
+<input type="text" placeholder="Nome">
+<input type="email" placeholder="Email">
+<textarea placeholder="Messaggio"></textarea>
+<button type="submit">Invia</button>
+</form>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
-    <p><strong>Turrà Francesco Autotrasporti</strong></p>
-    <p>P.IVA 01466180799 | C.F. TRRFNC64L02D236Q</p>
-    <p>© 2026 Tutti i diritti riservati</p>
+© 2026 Turrà Francesco Autotrasporti
 </footer>
 
-<!-- WHATSAPP FLOAT -->
-<a class="whatsapp-float" href="https://wa.me/393486384480" target="_blank">💬</a>
+<a class="whatsapp-float" href="https://wa.me/393486384480">💬</a>
 
 </body>
 </html>
