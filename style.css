@@ -42,53 +42,40 @@ nav a:hover{
 }
 
 /* HERO */
-
 .hero{
-    height:100vh;
-    background:url('images/1.jpg') center/cover no-repeat;
+    height:95vh;
+    background:url('images/hero.jpg') center/cover no-repeat;
     display:flex;
     align-items:center;
     justify-content:center;
     position:relative;
 }
 
-/* overlay elegante tipo Volvo/Scania */
 .hero::after{
     content:"";
     position:absolute;
     inset:0;
-    background:linear-gradient(
-        180deg,
-        rgba(0,0,0,0.35),
-        rgba(0,0,0,0.75)
-    );
+    background:rgba(255,255,255,0.75);
 }
 
-/* contenuto sopra immagine */
 .hero-overlay{
     position:relative;
-    z-index:2;
     text-align:center;
+    z-index:2;
     max-width:900px;
     padding:20px;
-    color:white;
 }
 
 .hero h1{
-    font-size:3.5rem;
+    font-size:3.4rem;
     font-weight:700;
-    letter-spacing:-1px;
+    color:#0F172A;
 }
 
 .hero p{
     margin-top:12px;
-    font-size:1.2rem;
-    color:#E5E7EB;
-}
-
-/* bottoni */
-.hero-buttons{
-    margin-top:25px;
+    color:#475569;
+    font-size:1.1rem;
 }
 
 /* BOTTONI */
