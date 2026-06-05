@@ -1,10 +1,29 @@
-const elements = document.querySelectorAll('.reveal');
+function openImg(img){
+    const modal = document.createElement("div");
+    modal.classList.add("modal");
 
-window.addEventListener('scroll', () => {
-    elements.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if(top < window.innerHeight - 100){
-            el.classList.add('active');
-        }
-    });
-});
+    modal.innerHTML = `<img src="${img.src}">`;
+
+    modal.onclick = () => modal.remove();
+
+    document.body.appendChild(modal);
+}
+
+function changeMap(place){
+
+    let url = "";
+
+    if(place === "cutro"){
+        url = "https://www.google.com/maps?q=Cutro+KR&output=embed";
+    }
+
+    if(place === "reggio"){
+        url = "https://www.google.com/maps?q=Reggio+Emilia&output=embed";
+    }
+
+    if(place === "gualtieri"){
+        url = "https://www.google.com/maps?q=Gualtieri+RE&output=embed";
+    }
+
+    document.getElementById("map").src = url;
+}
