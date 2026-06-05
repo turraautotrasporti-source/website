@@ -92,19 +92,22 @@ Offriamo servizi di trasporto merci su scala nazionale, garantendo soluzioni pun
     <h2>Le Nostre Sedi</h2>
 
     <div class="grid">
-        <div class="card">
+        <!-- Card 1 -->
+        <div class="card" data-src="https://www.google.com/maps?q=Via%20F.%20De%20Pinedo%202%20Cutro&output=embed">
             <h3>Sede Legale</h3>
             Via F. De Pinedo, 2<br>
             88842 Cutro (KR)
         </div>
 
-        <div class="card">
+        <!-- Card 2 (Inizialmente attiva) -->
+        <div class="card active" data-src="https://www.google.com/maps?q=Via%20Ignazio%20Silone%2026%20Reggio%20Emilia&output=embed">
             <h3>Sede Operativa</h3>
             Via Ignazio Silone, 26<br>
             42122 Reggio Emilia (RE)
         </div>
 
-        <div class="card">
+        <!-- Card 3 -->
+        <div class="card" data-src="https://www.google.com/maps?q=Via%20XXV%20Aprile%2037%20Gualtieri&output=embed">
             <h3>Sede Operativa</h3>
             Via XXV Aprile, 37<br>
             42044 Gualtieri (RE)
@@ -117,11 +120,12 @@ Offriamo servizi di trasporto merci su scala nazionale, garantendo soluzioni pun
     <h2>Dove Siamo</h2>
 
     <iframe
+        id="map-frame"
         src="https://www.google.com/maps?q=Via%20Ignazio%20Silone%2026%20Reggio%20Emilia&output=embed"
         loading="lazy">
     </iframe>
 </section>
-
+    
 <!-- CONTATTI -->
 <section id="contatti" class="section dark reveal">
     <h2>Contatti</h2>
@@ -151,5 +155,26 @@ Offriamo servizi di trasporto merci su scala nazionale, garantendo soluzioni pun
 <!-- WHATSAPP FLOAT -->
 <a class="whatsapp-float" href="https://wa.me/393486384480" target="_blank">💬</a>
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('#sedi .card');
+    const mapFrame = document.getElementById('map-frame');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            // 1. Rimuove la classe active da tutte le card
+            cards.forEach(c => c.classList.remove('active'));
+            
+            // 2. Aggiunge la classe active alla card cliccata
+            card.classList.add('active');
+            
+            // 3. Prende il link dal data-src della card cliccata
+            const newMapUrl = card.getAttribute('data-src');
+            
+            // 4. Aggiorna l'iframe della mappa
+            mapFrame.src = newMapUrl;
+        });
+    });
+});
 </body>
 </html>
