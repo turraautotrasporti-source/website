@@ -6,8 +6,9 @@
 }
 
 body{
-    background:#0A0F1C;
-    color:#F8FAFC;
+    background:#0B0E14;
+    color:#F5F7FA;
+    line-height:1.6;
 }
 
 /* HEADER */
@@ -15,9 +16,9 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 50px;
-    background:rgba(10,15,28,0.85);
-    backdrop-filter: blur(12px);
+    padding:18px 60px;
+    background:rgba(10,12,18,0.85);
+    backdrop-filter: blur(14px);
     position:sticky;
     top:0;
     z-index:1000;
@@ -25,21 +26,20 @@ header{
 }
 
 header img{
-    height:46px;
+    height:48px;
 }
 
 nav a{
-    color:#F8FAFC;
+    color:#C9D1D9;
     margin:0 14px;
     text-decoration:none;
-    font-weight:500;
     font-size:14px;
-    letter-spacing:0.3px;
-    transition:0.3s;
+    letter-spacing:0.4px;
+    transition:0.25s;
 }
 
 nav a:hover{
-    color:#1F3A5F;
+    color:#c4133b;
 }
 
 /* HERO */
@@ -58,127 +58,141 @@ nav a:hover{
     inset:0;
     background:linear-gradient(
         180deg,
-        rgba(10,15,28,0.6),
-        rgba(10,15,28,0.9)
+        rgba(11,14,20,0.4),
+        rgba(11,14,20,0.92)
     );
 }
 
 .hero-overlay{
     position:relative;
-    z-index:2;
     text-align:center;
-    max-width:850px;
+    max-width:900px;
     padding:20px;
+    z-index:2;
 }
 
 .hero h1{
-    font-size:3.4rem;
+    font-size:3.6rem;
     font-weight:700;
     letter-spacing:-1px;
 }
 
 .hero p{
     margin-top:12px;
+    color:#AAB2BD;
     font-size:1.15rem;
-    color:#94A3B8;
 }
 
-/* BOTTONI */
+/* BOTTONI SCANIA STYLE */
 .btn{
     display:inline-block;
     margin-top:25px;
-    padding:14px 28px;
-    background:#1F3A5F;
-    color:#fff;
-    border-radius:10px;
+    padding:14px 30px;
+    background:#c4133b;
+    color:white;
+    border-radius:6px;
     text-decoration:none;
     font-weight:600;
-    transition:0.3s;
-    border:1px solid rgba(255,255,255,0.08);
+    letter-spacing:0.3px;
+    transition:0.25s;
+    border:1px solid transparent;
 }
 
 .btn:hover{
     transform:translateY(-2px);
-    background:#2a4a73;
+    background:#a80f30;
 }
 
 .btn.secondary{
     background:transparent;
-    border:1px solid rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.2);
+    color:#F5F7FA;
+}
+
+.btn.secondary:hover{
+    border-color:#c4133b;
+    color:#c4133b;
+}
+
+/* IMMAGINE HERO */
+.hero-image{
+    margin-top:40px;
+}
+
+.hero-image img{
+    width:88%;
+    max-width:720px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.08);
+    box-shadow:0 25px 70px rgba(0,0,0,0.6);
 }
 
 /* SEZIONI */
 .section{
-    padding:100px 20px;
+    padding:110px 20px;
     text-align:center;
 }
 
 .section h2{
-    font-size:2rem;
-    margin-bottom:10px;
+    font-size:2.2rem;
+    font-weight:700;
 }
 
 .section p{
-    color:#94A3B8;
-    max-width:750px;
+    max-width:800px;
     margin:auto;
-    line-height:1.6;
+    color:#AAB2BD;
 }
 
-/* DARK BLOCK */
-.dark{
-    background:rgba(255,255,255,0.02);
-    border-top:1px solid rgba(255,255,255,0.05);
-    border-bottom:1px solid rgba(255,255,255,0.05);
-}
-
-/* GRID CARDS */
+/* GRID */
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:22px;
-    margin-top:45px;
+    margin-top:50px;
 }
 
+/* CARD SCANIA STYLE */
 .card{
     background:rgba(255,255,255,0.03);
     border:1px solid rgba(255,255,255,0.06);
-    padding:26px;
-    border-radius:14px;
-    transition:0.3s;
+    padding:28px;
+    border-radius:10px;
     text-align:left;
+    transition:0.25s;
 }
 
 .card:hover{
+    border-color:#c4133b;
     transform:translateY(-6px);
-    border-color:#1F3A5F;
 }
 
 /* GALLERY */
 .gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:16px;
-    margin-top:40px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:18px;
+    margin-top:45px;
 }
 
 .gallery img{
     width:100%;
-    border-radius:14px;
+    border-radius:10px;
+    filter:contrast(1.05) grayscale(10%);
     transition:0.3s;
-    filter:grayscale(10%);
 }
 
 .gallery img:hover{
-    transform:scale(1.03);
     filter:grayscale(0%);
+    transform:scale(1.02);
 }
 
 /* MAP */
 iframe{
-    width:90%;
-    height:400px;
-    border-radius:14px;
+    width:92%;
+    height:420px;
+    border:none;
+    border-radius:10px;
     border:1px solid rgba(255,255,255,0.08);
 }
 
@@ -186,7 +200,7 @@ iframe{
 .contact-form{
     display:flex;
     flex-direction:column;
-    max-width:520px;
+    max-width:540px;
     margin:auto;
     margin-top:30px;
 }
@@ -195,25 +209,24 @@ iframe{
 .contact-form textarea{
     margin:10px 0;
     padding:14px;
-    border-radius:10px;
+    background:rgba(255,255,255,0.03);
     border:1px solid rgba(255,255,255,0.08);
-    background:rgba(255,255,255,0.02);
+    border-radius:8px;
     color:white;
 }
 
 .contact-form button{
-    padding:14px;
+    background:#c4133b;
     border:none;
-    border-radius:10px;
-    background:#1F3A5F;
-    color:white;
+    padding:14px;
+    border-radius:8px;
     font-weight:600;
+    color:white;
     cursor:pointer;
-    transition:0.3s;
 }
 
 .contact-form button:hover{
-    background:#2a4a73;
+    background:#a80f30;
 }
 
 /* WHATSAPP */
@@ -221,32 +234,20 @@ iframe{
     position:fixed;
     bottom:22px;
     right:22px;
-    background:#1F3A5F;
+    background:#c4133b;
     color:white;
     padding:14px;
     border-radius:50%;
-    text-decoration:none;
     font-size:18px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
-
-/* ANIMAZIONI */
-.reveal{
-    opacity:0;
-    transform:translateY(35px);
-    transition:0.8s ease;
-}
-
-.reveal.active{
-    opacity:1;
-    transform:translateY(0);
+    text-decoration:none;
+    box-shadow:0 10px 40px rgba(0,0,0,0.6);
 }
 
 /* FOOTER */
 footer{
-    padding:35px;
+    padding:40px;
     text-align:center;
+    color:#8B949E;
     font-size:13px;
-    color:#94A3B8;
     border-top:1px solid rgba(255,255,255,0.06);
 }
