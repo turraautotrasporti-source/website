@@ -26,12 +26,28 @@ galleryImages.forEach(img => {
     });
 });
 
-closeBtn.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-});
-
-lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
+if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
         lightbox.style.display = 'none';
-    }
+    });
+}
+
+if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+}
+
+// SEDI — MAPPA INTERATTIVA
+const sediCards = document.querySelectorAll('#sedi .card[data-src]');
+const mapFrame = document.getElementById('map-frame');
+
+sediCards.forEach(card => {
+    card.addEventListener('click', () => {
+        sediCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        if (mapFrame) mapFrame.src = card.dataset.src;
+    });
 });
