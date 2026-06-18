@@ -561,9 +561,9 @@ footer{
 
 /* PAGE HERO (transport detail pages) */
 .page-hero{
-    height:45vh;
+    height:55vh;
     min-height:380px;
-    background-size:cover;
+    background-size:110%;
     background-position:center;
     display:flex;
     align-items:center;
