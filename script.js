@@ -40,6 +40,23 @@ if (lightbox) {
     });
 }
 
+// HAMBURGER MENU
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.querySelector('nav');
+
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        hamburger.classList.toggle('active');
+    });
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('open');
+            hamburger.classList.remove('active');
+        });
+    });
+}
+
 // SEDI — MAPPA INTERATTIVA
 const sediCards = document.querySelectorAll('#sedi .card[data-src]');
 const mapFrame = document.getElementById('map-frame');
