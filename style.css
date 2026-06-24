@@ -87,13 +87,20 @@ nav a:hover{
 }
 
 /* HERO */
+
 .hero{
     height:100vh;
-    background:url('images/1.jpg') center/cover no-repeat;
+    background: url('images/1.jpg') center/cover no-repeat;
     display:flex;
     align-items:center;
     justify-content:center;
     position:relative;
+}
+
+@media (max-width: 768px){
+    .hero{
+        background-size: contain;
+    }
 }
 
 /* overlay elegante tipo Volvo/Scania */
