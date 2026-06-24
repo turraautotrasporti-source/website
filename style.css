@@ -56,15 +56,7 @@ img {
     height: auto;
 }
 
-@media (max-width:768px){
-    .hero{
-        background-size:contain;
-    }
-
-    .hero::after{
-        display:none;
-    }
-}
+@media (max-width: 768px){ .hero{ background-size: contain; } } /* overlay elegante tipo Volvo/Scania */ .hero::after{ content:""; position:absolute; inset:0; background:linear-gradient( 180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.75) ); }
 nav a{
     color:#475569;
     margin:0 14px;
