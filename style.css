@@ -127,7 +127,8 @@ img {
 
 @media (max-width: 768px){
     .hero{
-        background-size: contain;
+        background-size: cover;
+        background-position: center;
     }
 }
 
@@ -148,7 +149,7 @@ nav a:hover{
 
 .hero{
     height:100vh;
-    background: url('images/copertina.jepg') center/cover no-repeat;
+    background: url('images/copertina.jpeg') center/cover no-repeat;
     display:flex;
     align-items:center;
     justify-content:center;
