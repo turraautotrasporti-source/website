@@ -51,6 +51,8 @@ body{
     }
     .chi-siamo-img img {
         height: auto;
+        object-fit: contain;   /* mostra l'immagine intera, niente ritaglio laterale */
+        min-height: 0;         /* annulla il min-height ereditato da PC */
     }
 }
 }
