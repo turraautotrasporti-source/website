@@ -125,33 +125,9 @@ img {
 }
 
 
-/* Nascondi l'immagine su desktop: lì resta lo sfondo CSS */
-.hero-img-mobile {
-    display: none;
-}
-
 @media (max-width: 768px){
     .hero{
-        height: auto;              /* l'altezza si adatta all'immagine, niente spazi */
-        min-height: 0;
-        background: none;          /* via lo sfondo CSS su mobile */
-        display: block;            /* così l'immagine e il testo si impilano bene */
-        position: relative;
-    }
-
-    .hero-img-mobile{
-        display: block;
-        width: 100%;
-        height: auto;              /* immagine intera, proporzioni originali */
-    }
-
-    /* Testo sovrapposto sopra l'immagine */
-    .hero-overlay{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
+        background-size: contain;
     }
 }
 
@@ -179,6 +155,13 @@ nav a:hover{
     position:relative;
 }
 
+@media (max-width:768px){
+    .hero{
+    
+        background-size: contain;
+  
+    }
+}
 
 /* overlay elegante tipo Volvo/Scania */
 .hero::after{
@@ -888,3 +871,4 @@ footer{
     .pdf-item{ flex-wrap:wrap; gap:12px; }
     .pdf-size{ display:none; }
 }
+
