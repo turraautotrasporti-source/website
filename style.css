@@ -12,7 +12,25 @@ body{
     color:#0F172A;
     line-height:1.6;
 }
+.banner-divider {
+    width: 100%;
+    line-height: 0; /* rimuove lo spazio bianco sotto l'immagine */
+}
 
+.banner-divider img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Su schermi molto larghi, limita l'altezza per non renderla eccessiva */
+@media (min-width: 1400px) {
+    .banner-divider img {
+        max-height: 500px;
+        object-fit: cover;
+    }
+}
 /* HEADER */
 header{
     display:flex;
