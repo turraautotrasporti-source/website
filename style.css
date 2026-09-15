@@ -12,25 +12,35 @@ body{
     color:#0F172A;
     line-height:1.6;
 }
-.banner-divider {
-    width: 100%;
-    background-color: #0a0a0a; /* colore che riempie lo spazio vuoto ai lati */
+.chi-siamo-split {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 55vh;        /* altezza fissa del "banner" su PC */
-    max-height: 500px;
-    overflow: hidden;
+    gap: 40px;
+    flex-wrap: wrap; /* per andare a capo su mobile */
 }
 
-.banner-divider img {
-    width: auto;
-    height: 100%;
-    max-width: 100%;
-    object-fit: contain;  /* mostra tutta l'immagine, senza tagli */
+.chi-siamo-text {
+    flex: 1 1 400px;
+}
+
+.chi-siamo-img {
+    flex: 1 1 400px;
+}
+
+.chi-siamo-img img {
+    width: 100%;
+    height: auto;
     display: block;
+    border-radius: 8px; /* opzionale, look più curato */
+    object-fit: cover;
 }
 
+/* Su mobile: testo sopra, immagine sotto, entrambi a piena larghezza */
+@media (max-width: 768px) {
+    .chi-siamo-split {
+        flex-direction: column;
+    }
+}
 /* Su mobile, torna a comportarsi come un'immagine a piena larghezza (perfetta così) */
 @media (max-width: 768px) {
     .banner-divider {
