@@ -158,13 +158,6 @@ nav a:hover{
     position:relative;
 }
 
-@media (max-width:768px){
-    .hero{
-    
-        background-size: contain;
-  
-    }
-}
 
 /* overlay elegante tipo Volvo/Scania */
 .hero::after{
