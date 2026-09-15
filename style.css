@@ -14,16 +14,23 @@ body{
 }
 .banner-divider {
     width: 100%;
-    line-height: 0; /* rimuove lo spazio bianco sotto l'immagine */
+    overflow: hidden;
+    background-color: #000; /* colore di riempimento se l'immagine non copre tutto */
 }
 
 .banner-divider img {
     width: 100%;
-    height: auto;
     display: block;
-    object-fit: cover;
+    object-fit: contain;   /* mostra l'immagine intera, senza tagliarla */
+    max-height: 90vh;      /* evita che sia troppo alta su schermi grandi */
 }
 
+/* Su mobile, immagine leggibile senza scroll orizzontale */
+@media (max-width: 768px) {
+    .banner-divider img {
+        max-height: 60vh;
+    }
+}
 /* Su schermi molto larghi, limita l'altezza per non renderla eccessiva */
 @media (min-width: 1400px) {
     .banner-divider img {
