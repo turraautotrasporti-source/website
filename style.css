@@ -125,12 +125,33 @@ img {
 }
 
 
+/* Nascondi l'immagine su desktop: lì resta lo sfondo CSS */
+.hero-img-mobile {
+    display: none;
+}
+
 @media (max-width: 768px){
     .hero{
-        height: 60vh;
-        min-height: 420px;
-        background-size: cover;
-        background-position: center top;   /* prova: center, center top, center bottom */
+        height: auto;              /* l'altezza si adatta all'immagine, niente spazi */
+        min-height: 0;
+        background: none;          /* via lo sfondo CSS su mobile */
+        display: block;            /* così l'immagine e il testo si impilano bene */
+        position: relative;
+    }
+
+    .hero-img-mobile{
+        display: block;
+        width: 100%;
+        height: auto;              /* immagine intera, proporzioni originali */
+    }
+
+    /* Testo sovrapposto sopra l'immagine */
+    .hero-overlay{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
     }
 }
 
