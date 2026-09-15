@@ -14,9 +14,9 @@ body{
 }
 .chi-siamo-split {
     display: flex;
-    align-items: center;
+    align-items: stretch;   /* fa sì che l'immagine si estenda per tutta l'altezza della section */
     gap: 40px;
-    flex-wrap: wrap; /* per andare a capo su mobile */
+    flex-wrap: wrap;
 }
 
 .chi-siamo-text {
@@ -25,21 +25,34 @@ body{
 
 .chi-siamo-img {
     flex: 1 1 400px;
+    display: flex;          /* necessario perché l'img interna riempia tutta l'altezza */
 }
 
 .chi-siamo-img img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
-    border-radius: 8px; /* opzionale, look più curato */
-    object-fit: cover;
+    border-radius: 8px;
+    object-fit: cover;      /* riempie tutta l'altezza disponibile, ritagliando se serve */
 }
 
-/* Su mobile: testo sopra, immagine sotto, entrambi a piena larghezza */
+/* Su mobile: testo sopra, riga divisoria, immagine sotto */
 @media (max-width: 768px) {
     .chi-siamo-split {
         flex-direction: column;
     }
+
+    .chi-siamo-text {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* riga divisoria */
+    }
+
+    .chi-siamo-img img {
+        height: auto;        /* su mobile torna proporzionata, non forzata */
+        object-fit: cover;
+    }
+}
 }
 /* Su mobile, torna a comportarsi come un'immagine a piena larghezza (perfetta così) */
 @media (max-width: 768px) {
