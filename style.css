@@ -127,10 +127,10 @@ img {
 
 @media (max-width: 768px){
     .hero{
-        height: 50vh;              /* più bassa: niente spazi vuoti sopra/sotto */
+        height: 60vh;
         min-height: 420px;
         background-size: cover;
-        background-position: center;
+        background-position: center top;   /* prova: center, center top, center bottom */
     }
 }
 
