@@ -14,43 +14,43 @@ body{
 }
 .chi-siamo-split {
     display: flex;
-    align-items: stretch;   /* fa sì che l'immagine si estenda per tutta l'altezza della section */
-    gap: 40px;
+    align-items: stretch;
+    gap: 0;                    /* niente spazio tra testo e foto */
     flex-wrap: wrap;
+    padding: 0 !important;     /* annulla il padding della .section solo qui */
+    overflow: hidden;
 }
 
 .chi-siamo-text {
     flex: 1 1 400px;
+    padding: 60px 40px;        /* rimetti spazio SOLO attorno al testo */
 }
 
 .chi-siamo-img {
     flex: 1 1 400px;
-    display: flex;          /* necessario perché l'img interna riempia tutta l'altezza */
+    display: flex;
+    align-self: stretch;       /* si estende per tutta l'altezza */
 }
 
 .chi-siamo-img img {
     width: 100%;
     height: 100%;
     display: block;
-    border-radius: 8px;
-    object-fit: cover;      /* riempie tutta l'altezza disponibile, ritagliando se serve */
+    object-fit: cover;         /* riempie tutto lo spazio */
+    min-height: 100%;
 }
 
-/* Su mobile: testo sopra, riga divisoria, immagine sotto */
 @media (max-width: 768px) {
     .chi-siamo-split {
         flex-direction: column;
     }
-
     .chi-siamo-text {
         padding-bottom: 25px;
         margin-bottom: 25px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* riga divisoria */
+        border-bottom: 1px solid rgba(255,255,255,0.2);
     }
-
     .chi-siamo-img img {
-        height: auto;        /* su mobile torna proporzionata, non forzata */
-        object-fit: cover;
+        height: auto;
     }
 }
 }
