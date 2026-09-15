@@ -14,15 +14,13 @@ body{
 }
 .banner-divider {
     width: 100%;
-    overflow: hidden;
-    background-color: #000; /* colore di riempimento se l'immagine non copre tutto */
+    line-height: 0;
 }
 
 .banner-divider img {
     width: 100%;
+    height: auto;      /* l'altezza si adatta automaticamente al rapporto reale dell'immagine */
     display: block;
-    object-fit: contain;   /* mostra l'immagine intera, senza tagliarla */
-    max-height: 90vh;      /* evita che sia troppo alta su schermi grandi */
 }
 
 /* Su mobile, immagine leggibile senza scroll orizzontale */
