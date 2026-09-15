@@ -47,7 +47,7 @@ body{
     .chi-siamo-text {
         padding-bottom: 25px;
         margin-bottom: 25px;
-        border-bottom: 1px solid rgba(255,255,255,0.2);
+        border-bottom: 1px solid rgba(0,0,0,0.15);
     }
     .chi-siamo-img img {
         height: auto;
@@ -55,32 +55,7 @@ body{
         min-height: 0;         /* annulla il min-height ereditato da PC */
     }
 }
-}
-/* Su mobile, torna a comportarsi come un'immagine a piena larghezza (perfetta così) */
-@media (max-width: 768px) {
-    .banner-divider {
-        height: auto;
-        max-height: none;
-    }
-    .banner-divider img {
-        width: 100%;
-        height: auto;
-    }
-}
 
-/* Su mobile, immagine leggibile senza scroll orizzontale */
-@media (max-width: 768px) {
-    .banner-divider img {
-        max-height: 60vh;
-    }
-}
-/* Su schermi molto larghi, limita l'altezza per non renderla eccessiva */
-@media (min-width: 1400px) {
-    .banner-divider img {
-        max-height: 500px;
-        object-fit: cover;
-    }
-}
 /* HEADER */
 header{
     display:flex;
@@ -124,13 +99,6 @@ img {
     height: auto;
 }
 
-
-@media (max-width: 768px){
-    .hero{
-        background-size: contain;
-    }
-}
-
 nav a{
     color:#475569;
     margin:0 14px;
@@ -145,7 +113,6 @@ nav a:hover{
 }
 
 /* HERO */
-
 .hero{
     height:100vh;
     background: url('images/1.jpg') center/cover no-repeat;
@@ -155,11 +122,14 @@ nav a:hover{
     position:relative;
 }
 
+/* HERO MOBILE — immagine intera, niente spazi e niente taglio (foto 4:3) */
 @media (max-width:768px){
     .hero{
-    
-        background-size: contain;
-  
+        height: auto;              /* la sezione si adatta all'immagine */
+        aspect-ratio: 4 / 3;       /* stessa proporzione di 1.jpg (1600x1200) */
+        background-size: cover;     /* riempie tutto senza tagliare (ratio identico) */
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 
@@ -871,4 +841,3 @@ footer{
     .pdf-item{ flex-wrap:wrap; gap:12px; }
     .pdf-size{ display:none; }
 }
-
